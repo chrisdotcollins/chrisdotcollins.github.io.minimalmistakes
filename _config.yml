@@ -116,9 +116,6 @@ defaults:
       author_profile: false
       share: false
 
-
-
-
 category_archive:
   type: liquid
   path: /categories/
