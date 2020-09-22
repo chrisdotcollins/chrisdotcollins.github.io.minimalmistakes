@@ -1,9 +1,9 @@
 ---
 title: "Articles"
 permalink: /articles/
-layout: articles
-#layout: posts
-author_profile: true
+#layout: articles
+layout: posts
+author_profile: false
 ---
 
 <div id="dates3">
