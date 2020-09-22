@@ -90,12 +90,18 @@ author:
 
 footer:
   links:
-    - label: "Twitter"
+    - label: "@chrisdotcollins"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+    - label: "chrisdotcollins@gmail.com"
+      icon: "far fa-fw fa-envelope"
+      url: "mailto://chrisdotcollins@gmail.com"
+    - label: "chris-collins-hpc"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/chris-collins-hpc/"
+#    - label: "GitHub"
+#      icon: "fab fa-fw fa-github"
+#      url: "https://github.com/"
 #    - label: "Instagram"
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/"
