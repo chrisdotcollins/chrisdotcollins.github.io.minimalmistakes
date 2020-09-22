@@ -1,7 +1,8 @@
 ---
 title: "Articles"
 permalink: /articles/
-layout: articles
+#layout: articles
+layout: posts
 author_profile: true
 ---
 
