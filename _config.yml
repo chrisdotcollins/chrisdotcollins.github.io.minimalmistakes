@@ -106,6 +106,17 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _articles
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: single
+      author_profile: false
+      share: false
+
+
+
 
 category_archive:
   type: liquid
@@ -113,3 +124,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+collections:
+  articles:
+   output: true
+   permalink: /:collection/:path/
