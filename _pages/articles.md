@@ -1,7 +1,9 @@
 ---
-layout: default
-title: Posts
-permalink: /posts/
+title: "Articles"
+permalink: /articles/
+#layout: articles
+layout: posts
+author_profile: false
 ---
 
 <div id="dates3">
