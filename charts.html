@@ -5,11 +5,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawVisualization);
 
-      function drawVisualization() {
-        // Some raw data (not necessarily accurate)
-        var data = google.visualization.arrayToDataTable([
-          ['Time', 'Temp', 'Heating'],
-          ['2020-12-19T2350',15,18.9],
+      function drawVisualization() {        // Some raw data (not necessarily accurate)        var data = google.visualization.arrayToDataTable([          ['Time', 'Heating', 'Temp'],          ['2020-12-19T2350',15,18.9],
 ['2020-12-19T2355',15,19],
 ['2020-12-20T0000',15,18.7],
 ['2020-12-20T0005',0,18.9],
@@ -268,18 +264,10 @@
 ['2020-12-20T2125',15,18.8],
 ['2020-12-20T2130',15,18.7],
 ['2020-12-20T2135',15,19],
-        ]);
-
-        var options = {
-          title : 'Harry Heating',
-          vAxis: {title: 'Cups'},
-          hAxis: {title: 'Month'},
-          seriesType: 'bars',
-          series: {1: {type: 'line'}}
-        };
-
-        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+['2020-12-20T2140',15,18.8],
+['2020-12-20T2145',0,19.1],        ]);
+        var options = {          title : 'Harry Heating',          vAxis: {title: 'Degrees'},          hAxis: {title: 'Timestamp'},          seriesType: 'bars',          series: {3: {type: 'line'}}        };
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));        chart.draw(data, options);
       }
     </script>
   </head>
