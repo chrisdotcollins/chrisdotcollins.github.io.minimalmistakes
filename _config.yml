@@ -1,148 +1,51 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#------------------------------------------------------------------------------
+# General
+#------------------------------------------------------------------------------
+name: "Minimal-Block"
+description: "Minimalistic, friendly, responsive."
+language: "en"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Chris.Collins
-email: chrisdotcollins@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: chrisdotcollins
-#github_username: username
-#minimal_mistakes_skin: default
-#minimal_mistakes_skin: air
-minimal_mistakes_skin: contrast
-#minimal_mistakes_skin: dirt
-search: true
+url: http://localhost:4000
+baseurl: ''
 
-# Build settings
+#------------------------------------------------------------------------------
+# Markdown processor and code highlighting
+#------------------------------------------------------------------------------
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+highlighter: rouge
 
-include:
-  - _pages
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+#------------------------------------------------------------------------------
+# Pagination and friendly URLs
+#------------------------------------------------------------------------------
+paginate: 2
+paginate_path: /page-:num
+permalink: /:title
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+#------------------------------------------------------------------------------
+# Social sharing, comments and RSS.
+#------------------------------------------------------------------------------
+disqus-id: yourusername
 
-author:
-  name   : "Chris Collins"
-#  avatar : "/assets/images/bio-photo.jpg"
-  avatar : "/assets/images/calvinsupercomputer.png"
-  bio    : "HPC and Linux administrator. This site is mainly my own knowledge base and technical scrapbook!"
-  links:
-#    - label: "Website"
-#      icon: "fas fa-fw fa-link"
-#      url: "https://"
-    - label: "@chrisdotcollins"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/chrisdotcollins"
-#    - label: "Twitter"
-#      icon: "fab fa-fw fa-twitter-square"
-#      icon: "fab fa-twitter"
-#      url: "https://twitter.com/chrisdotcollins"
-    - label: "chrisdotcollins@gmail.com"
-      icon: "far fa-fw fa-envelope"
-      url: "mailto://chrisdotcollins@gmail.com"
-    - label: "chris-collins-hpc"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/chris-collins-hpc/"
-#    - label: "GitHub"
-#      icon: "fab fa-fw fa-github"
-#      url: "https://github.com/"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+enable-share: true
+twitter: yourusername
+github: yourusername
+google: +yourusername
 
-footer:
-  links:
-    - label: "@chrisdotcollins"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "chrisdotcollins@gmail.com"
-      icon: "far fa-fw fa-envelope"
-      url: "mailto://chrisdotcollins@gmail.com"
-    - label: "chris-collins-hpc"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/chris-collins-hpc/"
-#    - label: "GitHub"
-#      icon: "fab fa-fw fa-github"
-#      url: "https://github.com/"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+rss-feed-limit: 10
+rss-show-full: false
 
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: false
-      share: false
-      related: false
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _articles
-  - scope:
-      path: "_articles"
-      type: articles
-    values:
-      layout: single
-      author_profile: false
-      share: false
+#------------------------------------------------------------------------------
+# Configuration, plugins, gems, etc..
+#------------------------------------------------------------------------------
+source: .
+destination: ./_site
+gems: ['jekyll-paginate']
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-collections:
-  articles:
-   output: true
-   permalink: /:collection/:path/
+sass:
+    style: :compressed
+    sass_dir: assets/css/
